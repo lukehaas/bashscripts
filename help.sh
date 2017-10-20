@@ -45,7 +45,7 @@ if [[ "$@" == "sound" ]]; then
   printf "${CYAN}GUI for sound${NC}\n"
   printf "pavucontrol\n"
   printf "${CYAN}Adjust volume${NC}\n"
-  printf "amixer sset 'Master' 50%\n"
+  printf "amixer sset 'Master' 50%%\n"
 fi
 
 if [[ "$@" == "zsh" ]]; then
