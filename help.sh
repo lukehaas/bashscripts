@@ -116,6 +116,13 @@ if [[ "$@" == "battery" ]]; then
   printf "acpi\n"
 fi
 
+if [[ "$@" == "i3" ]]; then
+  found=true
+  printf "${CYAN}Reload or restart i3${NC}\n"
+  printf "i3-msg reload\n"
+  printf "i3-msg restart\n"
+fi
+
 if [[ "$found" == false ]]; then
   printf "Nothing found...\n"
 fi
