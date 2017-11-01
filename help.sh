@@ -11,6 +11,8 @@ sudo showkey"
 sevenzip="${CYAN}7zip extract${NC}
 7z e filename
 7z a archive.7z target_dir"
+rar="${CYAN}Rar extract${NC}
+unrar e filename"
 
 if [[ "$@" == "keys" || "$@" == "keycodes" ]]; then
   found=true
@@ -69,11 +71,17 @@ fi
 if [[ "$@" == "compression" ]]; then
   found=true
   printf "${sevenzip}\n"
+  printf "${rar}\n"
 fi
 
 if [[ "$@" == "7zip" ]]; then
   found=true
   printf "${sevenzip}\n"
+fi
+
+if [[ "$@" == "rar" ]]; then
+  found=true
+  printf "${rar}\n"
 fi
 
 if [[ "$@" == "wifi" || "$@" == "network" ]]; then
