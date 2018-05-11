@@ -90,12 +90,14 @@ if [[ "$@" == "wifi" || "$@" == "network" ]]; then
   printf "nmtui-connect\n"
 fi
 
-if [[ "$@" == "pacman" ]]; then
+if [[ "$@" == "pacman" || "$@" == "yaourt" ]]; then
   found=true
   printf "${CYAN}Remove package + dependencies and configs${NC}\n"
   printf "pacman -Rns package_name\n"
   printf "${CYAN}Upgrade packages${NC}\n"
   printf "pacman -Syu\n"
+  printf "${CYAN}List all explicitly installed packages${NC}\n"
+  printf "pacman -Qqe\n"
 fi
 
 if [[ "$@" == "mount" ]]; then
