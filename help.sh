@@ -92,6 +92,10 @@ fi
 
 if [[ "$@" == "pacman" || "$@" == "yaourt" ]]; then
   found=true
+  printf "${CYAN}Search for a package${NC}\n"
+  printf "pacman -Ss package_name\n"
+  printf "${CYAN}Install a package${NC}\n"
+  printf "pacman -S package_name\n"
   printf "${CYAN}Remove package + dependencies and configs${NC}\n"
   printf "pacman -Rns package_name\n"
   printf "${CYAN}Upgrade packages${NC}\n"
